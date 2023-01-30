@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!--<suite name="Complete Suite" thread-count="2" parallel="methods">-->
+<suite name="Complete Suite">
+  <!--    <groups>-->
+  <!--      <run>-->
+  <!--        <include name="com.client.project.common.Groups.INPUT_FIELD"/>-->
+  <!--      </run>-->
+  <!--    </groups>-->
+
+  <listeners>
+    <listener class-name="com.template.project.common.RetryListener"/>
+  </listeners>
+
+  <!-- browserNames: firefox, chrome, edge, iexplore, safari -->
+
+  <!--<test name="Firefox Tests" thread-count="2">-->
+  <!--  <parameter name="browserName" value="firefox"/>-->
+  <!--  <classes>-->
+  <!--    <class name="com.client.project.web.tests.featureflow.SampleTest"/>-->
+  <!--  </classes>-->
+  <!--</test>-->
+
+  <test name="Chrome Tests">
+    <parameter name="browserName" value="chrome"/>
+
+<!--    <groups>-->
+<!--      <run>-->
+<!--        <exclude name="not_for_remote_execution" />-->
+<!--      </run>-->
+<!--    </groups>-->
+
+    <classes>
+      <class name="com.template.project.web.tests.featureflow.BasicAuthTest"/>
+      <class name="com.template.project.web.tests.featureflow.CheckBoxTest"/>
+      <class name="com.template.project.web.tests.featureflow.KeyPressTest"/>
+    </classes>
+  </test>
+</suite>

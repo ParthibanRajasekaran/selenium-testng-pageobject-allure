@@ -1,0 +1,21 @@
+{
+  "default": {
+    "protocol": "https",
+    "host": "https://the-internet.herokuapp.com",
+    "host_url": "the-internet.herokuapp.com",
+    "sample": "This is default env test data",
+    "host_api": "https://api.predic8.de:443"
+  },
+  "int": {
+    "protocol": "https",
+    "host": "https://the-internet.herokuapp.com",
+    "sample": "This is int env test data",
+    "host_api": "https://api.predic8.de:443"
+  },
+  "test": {
+    "protocol": "https",
+    "host": "https://the-internet.herokuapp.com",
+    "sample": "This is test env test data",
+    "host_api": "https://api.predic8.de:443"
+  }
+}
