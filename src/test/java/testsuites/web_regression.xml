@@ -1,15 +1,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <!--<suite name="Complete Suite" thread-count="2" parallel="methods">-->
-<suite name="Complete Suite">
+<suite name="Complete Suite" thread-count="4" parallel="tests">
   <!--    <groups>-->
   <!--      <run>-->
   <!--        <include name="com.client.project.common.Groups.INPUT_FIELD"/>-->
   <!--      </run>-->
   <!--    </groups>-->
 
-  <listeners>
-    <listener class-name="com.template.project.common.RetryListener"/>
-  </listeners>
+<!--  <listeners>-->
+<!--    <listener class-name="com.template.project.common.RetryListener"/>-->
+<!--  </listeners>-->
 
   <!-- browserNames: firefox, chrome, edge, iexplore, safari -->
 
