@@ -18,15 +18,15 @@ import static com.template.project.common.Constants.FLUENT_WAIT_POLLING_INTERVAL
 import static com.template.project.common.Constants.FLUENT_WAIT_TIMEOUT_SECONDS;
 import static com.template.project.common.Logger.logError;
 import static com.template.project.common.Logger.logInfo;
+import static com.template.project.web.utils.BrowserStackFactory.getDriver;
 import static com.template.project.web.utils.SeleniumUtils.tryFindElement;
-import static com.template.project.web.utils.WebDriverHolder.getDriver;
 import static org.awaitility.Awaitility.await;
 import static org.openqa.selenium.By.xpath;
 
 @Slf4j
 public class Waiters {
 
-  static Wait<WebDriver> getFluentWait() {
+  public static Wait<WebDriver> getFluentWait() {
     return getFluentWait(FLUENT_WAIT_TIMEOUT_SECONDS);
   }
 
@@ -91,7 +91,7 @@ public class Waiters {
    * @param locator a valid xpath locator
    */
   @Step
-  static void waitUntilElementClickable(final String locator) {
+  public static void waitUntilElementClickable(final String locator) {
     log.trace("Waiting for element \"{}\" to be clickable", locator);
     getFluentWait().until(ExpectedConditions.elementToBeClickable(xpath(locator)));
   }
@@ -104,7 +104,7 @@ public class Waiters {
    * @param text Text for which we will search
    */
   @Step
-  static void waitUntilValueWillBePresentInElement(final String locator, final String text) {
+  public static void waitUntilValueWillBePresentInElement(final String locator, final String text) {
     log.trace("Waiting for text \"{}\" to be present in {}", text, locator);
     getFluentWait().until(ExpectedConditions.textToBePresentInElementValue(xpath(locator), text));
   }

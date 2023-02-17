@@ -1,7 +1,6 @@
 package com.template.project.common;
 
 import com.sun.mail.iap.Response;
-import com.template.project.web.utils.WebDriverHolder;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import lombok.SneakyThrows;
@@ -15,6 +14,7 @@ import java.io.IOException;
 import java.text.MessageFormat;
 import java.util.Properties;
 
+import static com.template.project.web.utils.BrowserStackFactory.getDriver;
 import static org.testng.Reporter.log;
 
 /** Adds content to allure reporting. */
@@ -193,7 +193,7 @@ public class Logger {
     //                            ((TakesScreenshot)
     // WebDriverHolder.getDriver()).getScreenshotAs(OutputType.FILE),
     //                            "Appending Screenshot")));
-    return ((TakesScreenshot) WebDriverHolder.getDriver()).getScreenshotAs(OutputType.BYTES);
+    return ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
   }
 
   /**

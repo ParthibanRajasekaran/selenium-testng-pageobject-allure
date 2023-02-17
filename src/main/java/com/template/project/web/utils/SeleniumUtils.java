@@ -16,15 +16,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
-import java.net.URI;
 import java.util.*;
-import java.util.function.Predicate;
 
 import static com.template.project.common.Logger.logError;
 import static com.template.project.common.Logger.logInfo;
+import static com.template.project.web.utils.BrowserStackFactory.getDriver;
 import static com.template.project.web.utils.Waiters.*;
-import static com.template.project.web.utils.WebDriverHolder.getAugmentedDriver;
-import static com.template.project.web.utils.WebDriverHolder.getDriver;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 import static org.testng.AssertJUnit.fail;
@@ -825,18 +822,18 @@ public class SeleniumUtils {
     actions.doubleClick(tryFindElement(locator)).perform();
   }
 
-  /** Handle basic auth via bi-directional api
-   * @param hostName as String
-   * @param username as String
-   * @param password as String
-   */
-  public static void handleBasicAuthViaBiDiApi(
-      final String hostName, final String username, final String password) {
-    WebDriver driver = getAugmentedDriver();
-    Predicate<URI> uriPredicate = uri -> uri.getHost().contains(hostName);
-    ((HasAuthentication) driver)
-        .register(uriPredicate, UsernameAndPassword.of(username, password));
-  }
+//  /** Handle basic auth via bi-directional api
+//   * @param hostName as String
+//   * @param username as String
+//   * @param password as String
+//   */
+//  public static void handleBasicAuthViaBiDiApi(
+//      final String hostName, final String username, final String password) {
+//    WebDriver driver = getAugmentedDriver();
+//    Predicate<URI> uriPredicate = uri -> uri.getHost().contains(hostName);
+//    ((HasAuthentication) driver)
+//        .register(uriPredicate, UsernameAndPassword.of(username, password));
+//  }
 
   /**
    * Handle basic auth via chrome dev tools
