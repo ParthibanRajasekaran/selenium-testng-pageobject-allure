@@ -1,0 +1,42 @@
+{
+    "server": "hub.browserstack.com",
+    "user": "bsuser7501665",
+    "key": "vEit5qmnpQQYcoPf9ZcC",
+
+    "capabilities": {
+      "bstack:options": {
+        "buildName": "selenium-testng-build",
+        "sessionName": "Selenium TestNG Template - HerokuApp",
+        "browserVersion": "latest",
+        "debug": "true",
+        "local": "true"
+      }
+    },
+
+    "environments": {
+      "default": {
+        "bstack:options": {
+          "os":"Windows",
+          "osVersion":"11"
+        },
+        "browserName": "chrome",
+        "browserVersion":"latest"
+      },
+      "int": {
+        "default": {
+          "bstack:options": {
+            "os":"Windows",
+            "osVersion":"11"
+          },
+          "browserName": "chrome",
+          "browserVersion":"latest"
+      },
+      "test": {
+        "bstack:options": {
+          "os": "OS X"
+        },
+        "browserName": "safari",
+        "browserVersion":"latest"
+     }
+   }
+}
