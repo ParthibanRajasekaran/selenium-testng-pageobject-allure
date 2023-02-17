@@ -328,3 +328,6 @@ ajcore.*.*.*.txt
 
 # settings.xml
 settings.xml
+
+# browserstack error files
+browserstack.err
