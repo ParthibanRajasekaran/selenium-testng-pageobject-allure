@@ -29,7 +29,7 @@ public class DragAndDropTest extends BaseTest {
             getDriver().manage().window().maximize();
             herokuappLandingPage.verifyIfPageHeaderIsDisplayed();
             herokuappLandingPage.navigateToSubPage("Drag and Drop");
-            sleep(5000);:
+            sleep(5000);
         }
 
         @Test
