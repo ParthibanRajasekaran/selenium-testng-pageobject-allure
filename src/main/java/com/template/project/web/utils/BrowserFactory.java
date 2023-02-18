@@ -61,7 +61,7 @@ public class BrowserFactory {
 
   /** This method is to setup webDriverManager for different browser */
   private static void setupWebDriverManager() {
-    WebDriverManager.chromedriver().setup();
+    // WebDriverManager.chromedriver().setup();
     WebDriverManager.firefoxdriver().driverVersion("0.30.0").setup();
     WebDriverManager.iedriver().setup();
     WebDriverManager.edgedriver().setup();
