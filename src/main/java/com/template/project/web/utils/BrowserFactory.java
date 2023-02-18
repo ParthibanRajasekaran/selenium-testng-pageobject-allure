@@ -100,7 +100,7 @@ public class BrowserFactory {
         return new RemoteWebDriver(new URL(HUB), options);
       }
     } else {
-      setupWebDriverManager();
+//      setupWebDriverManager();
       return new ChromeDriver(options);
     }
   }
