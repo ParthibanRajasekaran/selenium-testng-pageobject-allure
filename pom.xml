@@ -18,7 +18,7 @@
     <envConfig/>
 
     <log4j2.version>2.19.0</log4j2.version>
-    <selenium.version>4.8.0</selenium.version>
+    <selenium.version>4.8.1</selenium.version>
     <lombok.version>1.18.24</lombok.version>
   </properties>
 
