@@ -7,9 +7,9 @@
   <!--      </run>-->
   <!--    </groups>-->
 
-  <listeners>
-    <listener class-name="com.template.project.common.RetryListener"/>
-  </listeners>
+<!--  <listeners>-->
+<!--    <listener class-name="com.template.project.common.RetryListener"/>-->
+<!--  </listeners>-->
 
   <!-- browserNames: firefox, chrome, edge, iexplore, safari -->
 
