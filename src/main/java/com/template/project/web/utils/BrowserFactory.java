@@ -97,7 +97,6 @@ public class BrowserFactory {
     if (INCOGNITO) options.addArguments("--incognito");
 
     if (isRemote()) {
-      setupWebDriverManager();
       if (isStandaloneChrome()) {
         return new RemoteWebDriver(new URL(STANDALONE_CHROME), options);
       } else {
