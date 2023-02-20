@@ -1,6 +1,5 @@
 package com.template.project.common;
 
-import com.sun.mail.iap.Response;
 import com.template.project.web.utils.WebDriverHolder;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
@@ -147,35 +146,6 @@ public class Logger {
     } catch (IOException e) {
       e.printStackTrace();
     }
-  }
-
-  /**
-   * Log response body in the allure report, note that it does not write to the system log.
-   *
-   * @param rawRes a valid not null restassured response instance
-   */
-  @Attachment(value = "response body :")
-  public static String logResponse(final Response rawRes) {
-    if (null == rawRes) {
-      Logger.log.debug("Response was null");
-      return "null Response";
-    }
-    attachJsonToReportPortal(convertRawToString(rawRes), "Response body: ");
-    return convertRawToString(rawRes);
-  }
-
-  /**
-   * This method is to convert response body in Response format to String.
-   *
-   * @param rawRes A not null restassured response instance.
-   * @return an empty string if {@code rawRes is null}
-   */
-  public static String convertRawToString(final Response rawRes) {
-    if (null == rawRes) {
-      Logger.log.debug("Attempting to convert null Response to String, will return empty string");
-      return "";
-    }
-    return rawRes.toString();
   }
 
   /**

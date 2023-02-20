@@ -1,7 +1,6 @@
 package com.template.project.web.utils;
 
 import com.template.project.common.Cipher;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -91,7 +90,7 @@ public class BrowserFactory {
   private static WebDriver getChromeBrowser() throws MalformedURLException {
     final ChromeOptions options = new ChromeOptions();
     options.addArguments("--disable-dev-shm-usage");
-    if(HEADLESS) options.addArguments("--headless=new");
+    if(HEADLESS) options.addArguments("--headless=new"); // In line with Selenium 4.8.0 headless guidelines for chrome
     options.setAcceptInsecureCerts(INSECURE_CERTIFICATE);
     if (NO_SANDBOX) options.addArguments("--no-sandbox");
     if (INCOGNITO) options.addArguments("--incognito");
@@ -116,7 +115,7 @@ public class BrowserFactory {
    */
   private static WebDriver getFirefoxBrowser() throws MalformedURLException {
     FirefoxOptions options = new FirefoxOptions();
-    if(HEADLESS) options.addArguments("-headless");
+    if(HEADLESS) options.addArguments("-headless"); // In line with Selenium 4.8.0 headless guidelines for firefox
     options.setCapability("moz:firefoxOptions", options);
     System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
 
