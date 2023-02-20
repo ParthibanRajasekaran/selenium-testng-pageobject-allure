@@ -2,6 +2,6 @@
   "hub": "http://localhost:4444",
   "headless": false,
   "insecure_certificate": false,
-  "no_sandbox": false,
+  "no_sandbox": true,
   "incognito": false
 }

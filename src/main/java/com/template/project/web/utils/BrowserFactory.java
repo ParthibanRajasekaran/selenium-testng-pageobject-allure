@@ -10,6 +10,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.manager.SeleniumManager;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import javax.naming.ConfigurationException;
@@ -61,10 +62,13 @@ public class BrowserFactory {
 
   /** This method is to setup webDriverManager for different browser */
   private static void setupWebDriverManager() {
-    // WebDriverManager.chromedriver().setup();
-    WebDriverManager.firefoxdriver().driverVersion("0.30.0").setup();
-    WebDriverManager.iedriver().setup();
-    WebDriverManager.edgedriver().setup();
+    SeleniumManager.getInstance().getDriverPath("chromedriver");
+    SeleniumManager.getInstance().getDriverPath("geckodriver");
+    SeleniumManager.getInstance().getDriverPath("msedgedriver");
+//    WebDriverManager.chromedriver().setup();
+//    WebDriverManager.firefoxdriver().driverVersion("0.30.0").setup();
+//    WebDriverManager.iedriver().setup();
+//    WebDriverManager.edgedriver().setup();
   }
 
   /**
@@ -100,7 +104,7 @@ public class BrowserFactory {
         return new RemoteWebDriver(new URL(HUB), options);
       }
     } else {
-//      setupWebDriverManager();
+      setupWebDriverManager();
       return new ChromeDriver(options);
     }
   }
