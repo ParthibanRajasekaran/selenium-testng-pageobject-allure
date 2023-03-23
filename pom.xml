@@ -20,6 +20,7 @@
     <log4j2.version>2.20.0</log4j2.version>
     <selenium.version>4.8.1</selenium.version>
     <lombok.version>1.18.24</lombok.version>
+    <allure.version>2.19.0</allure.version>
   </properties>
 
   <build>
@@ -67,13 +68,9 @@
         </dependencies>
       </plugin>
       <plugin>
-        <groupId>io.qameta.allure</groupId>
         <artifactId>allure-maven</artifactId>
-        <version>2.10.0</version>
-        <configuration>
-          <resultsDirectory>${basedir}/target/allure-results</resultsDirectory>
-          <reportDirectory>${basedir}/target/allure-reports</reportDirectory>
-        </configuration>
+        <groupId>io.qameta.allure</groupId>
+        <version>2.11.2</version>
       </plugin>
 
     </plugins>
@@ -201,5 +198,19 @@
     </dependency>
 
   </dependencies>
+
+  <reporting>
+    <excludeDefaults>true</excludeDefaults>
+    <plugins>
+      <plugin>
+        <artifactId>allure-maven</artifactId>
+        <configuration>
+          <reportVersion>${allure.version}</reportVersion>
+        </configuration>
+        <groupId>io.qameta.allure</groupId>
+        <version>2.11.2</version>
+      </plugin>
+    </plugins>
+  </reporting>
 
 </project>
