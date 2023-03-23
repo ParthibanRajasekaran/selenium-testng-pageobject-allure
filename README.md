@@ -1,11 +1,6 @@
 ### Hi there, I'm Parthiban Rajasekaran 👋
 
-  <p align="left">
-    <a href="https://github.com/ParthibanRajasekaran/selenium-testng-pageobject-allure/actions">
-      <img alt="Tests Passing" src="https://github.com/ParthibanRajasekaran/selenium-testng-pageobject-allure/workflows/maven/badge.svg" />
-    </a>
-    <br />
-  </p>
+[![Selenium Test Execution Status](https://github.com/ParthibanRajasekaran/selenium-testng-pageobject-allure/workflows/regression/badge.svg)](https://github.com/ParthibanRajasekaran/selenium-testng-pageobject-allure/actions)
 
 ### Connect with me
 
