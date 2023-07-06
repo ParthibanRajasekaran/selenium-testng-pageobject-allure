@@ -1,6 +1,7 @@
 package com.template.project.web.utils;
 
 import com.template.project.common.Cipher;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -61,9 +62,9 @@ public class BrowserFactory {
 
   /** This method is to setup webDriverManager for different browser */
   private static void setupWebDriverManager() {
-    SeleniumManager.getInstance().getDriverPath("chromedriver");
-    SeleniumManager.getInstance().getDriverPath("geckodriver");
-    SeleniumManager.getInstance().getDriverPath("msedgedriver");
+    SeleniumManager.getInstance().getDriverPath(new ChromeOptions());
+    SeleniumManager.getInstance().getDriverPath(new FirefoxOptions());
+    SeleniumManager.getInstance().getDriverPath(new EdgeOptions());
 //    WebDriverManager.chromedriver().setup();
 //    WebDriverManager.firefoxdriver().driverVersion("0.30.0").setup();
 //    WebDriverManager.iedriver().setup();
