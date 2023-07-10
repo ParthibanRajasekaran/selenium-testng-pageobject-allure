@@ -59,6 +59,13 @@ Community edition
 
 <br />
 
+
+### Sponsor
+[<img align="middle" alt="Git" width="46px" src="https://miro.medium.com/max/500/1*laPnPnnXeJQLRyVBm4eM1g.png" />][BrowserStack]
+
+This project is tested with BrowserStack
+
+
 ### FAQ:
 
 <p align="left">
@@ -98,3 +105,5 @@ Community edition
 [allure-report]: https://docs.qameta.io/allure/
 
 [selenium]: https://selenium.dev/
+  
+[BrowserStack]: https://www.browserstack.com/
