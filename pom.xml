@@ -17,7 +17,7 @@
     <suiteFile/>
     <envConfig/>
 
-    <log4j2.version>2.20.0</log4j2.version>
+    <log4j2.version>2.25.3</log4j2.version>
     <selenium.version>4.10.0</selenium.version>
     <lombok.version>1.18.24</lombok.version>
     <allure.version>2.19.0</allure.version>
@@ -194,7 +194,7 @@
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
-      <version>2.11.0</version>
+      <version>2.14.0</version>
     </dependency>
 
   </dependencies>
